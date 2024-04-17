@@ -52,7 +52,7 @@
 
     <EditText
         android:id="@+id/edit_senha"
-        style="@style/Edit_Text"
+        style="@style/Edit_Senha"
         android:hint="Senha"
         android:inputType="numberPassword"
         android:drawableRight="@drawable/ic_eye"

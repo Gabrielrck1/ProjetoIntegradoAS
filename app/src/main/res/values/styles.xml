@@ -13,7 +13,18 @@
         <item   name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/edit_text</item>
         <item name="android:padding">20dp</item>
-        <item name="android:maxLength">25</item>
+        <item name="android:maxLength">50</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <style name="Edit_Senha">
+        <item   name="android:layout_width">match_parent</item>
+        <item   name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edit_text</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:maxLength">10</item>
         <item name="android:layout_marginLeft">40dp</item>
         <item name="android:layout_marginRight">40dp</item>
         <item name="android:layout_marginTop">15dp</item>
@@ -48,6 +59,5 @@
         <item name="android:background">@drawable/button2</item>
 
     </style>
-
 
 </resources>
