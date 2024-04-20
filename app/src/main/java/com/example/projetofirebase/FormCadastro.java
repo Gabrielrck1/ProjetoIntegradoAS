@@ -29,9 +29,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FormCadastro extends AppCompatActivity {
-    private EditText edit_nome, edit_email, edit_senha;
+    private EditText edit_nome, edit_email, edit_senha, edit_senha2;
     private Button bt_cadastrar;
-    String[] mensagens = {"Preencha todos os campos", "Cadastro realizado com sucesso"};
+    String[] mensagens = {"Preencha todos os campos", "Cadastro realizado com sucesso", "Senha diferente em um dos campos"};
     String usuarioID;
 
 
@@ -55,14 +55,22 @@ public class FormCadastro extends AppCompatActivity {
                 String nome = edit_nome.getText().toString();
                 String email = edit_email.getText().toString();
                 String senha = edit_senha.getText().toString();
+                String senha2 = edit_senha2.getText().toString();
 
-                if (nome.isEmpty() || email.isEmpty() || senha.isEmpty()) {
+                if (nome.isEmpty() || email.isEmpty() || senha.isEmpty() || senha2.isEmpty()) {
                     Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
                     snackbar.setBackgroundTint(Color.WHITE);
                     snackbar.setTextColor(Color.BLACK);
                     snackbar.show();
                 } else {
-                    CadastrarUsuario(v);
+                    if ( senha.equals(senha2)) {
+                        CadastrarUsuario(v);
+                    } else{
+                        Snackbar snackbar = Snackbar.make(v, mensagens[2], Snackbar.LENGTH_SHORT);
+                        snackbar.setBackgroundTint(Color.WHITE);
+                        snackbar.setTextColor(Color.BLACK);
+                        snackbar.show();
+                    }
                 }
             }
         });
@@ -138,5 +146,6 @@ public class FormCadastro extends AppCompatActivity {
         edit_email = findViewById(R.id.edit_email);
         edit_senha = findViewById(R.id.edit_senha);
         bt_cadastrar = findViewById(R.id.bt_cadastrar);
+        edit_senha2 = findViewById(R.id.edit_senha2);
     }
 }

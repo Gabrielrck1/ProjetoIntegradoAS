@@ -2,5 +2,10 @@
     <string name="app_name">Projeto Firebase</string>
     <string name="entrar">Entrar</string>
     <string name="text_cadastro">Crie uma conta clicando aqui</string>
+    <string name="text_tela_senha">Recuperar senha</string>
     <string name="title_cadastro">Cadastre-se</string>
+    <string name="senha">Senha</string>
+    <string name="email">Email</string>
+    <string name="logo">logo</string>
+    <string name="senha2">Senha</string>
 </resources>
