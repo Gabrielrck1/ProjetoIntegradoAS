@@ -31,6 +31,7 @@
         app:layout_constraintTop_toBottomOf="@id/title_cadastrese" />
 
     <EditText
+        android:autofillHints="campo nome"
         android:id="@+id/edit_nome"
         style="@style/Edit_Text"
         android:hint="@string/nome"
@@ -41,6 +42,7 @@
         />
 
     <EditText
+        android:autofillHints="campo email"
         android:id="@+id/edit_email"
         style="@style/Edit_Text"
         android:hint="@string/email_1"
@@ -53,6 +55,7 @@
 
     <EditText
         android:id="@+id/edit_senha"
+        android:autofillHints="campo senha"
         style="@style/Edit_Senha"
         android:hint="@string/senha_1"
         android:inputType="numberPassword"
@@ -64,6 +67,7 @@
 
     <EditText
         android:id="@+id/edit_senha2"
+        android:autofillHints="campo senha confirm"
         style="@style/Edit_Senha"
         android:hint="@string/repita_a_senha"
         android:inputType="numberPassword"
