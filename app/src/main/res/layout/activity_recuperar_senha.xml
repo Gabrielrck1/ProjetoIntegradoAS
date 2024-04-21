@@ -43,6 +43,17 @@
         app:layout_constraintStart_toStartOf="@id/containerComponents"
         app:layout_constraintTop_toTopOf="@id/containerComponents" />
 
+    <EditText
+        android:id="@+id/edit_email2"
+        style="@style/Edit_Text"
+        android:autofillHints="campo email"
+        android:drawableEnd="@drawable/ic_email"
+        android:hint="@string/email_1"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@id/containerComponents"
+        app:layout_constraintStart_toStartOf="@id/containerComponents"
+        app:layout_constraintTop_toTopOf="@id/containerComponents" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_reset"
         style="@style/Button2"
