@@ -69,43 +69,61 @@ public class FormCadastro extends AppCompatActivity {
             }
         });
     }
-    private void CadastrarUsuario(View v) {
 
+    private boolean isEmailValido(String email) {
+        // Lista de domínios válidos
+        String[] dominiosValidos = {"gmail.com", "hotmail.com", "yahoo.com", "bol.com"};
+
+        // Obter o domínio do email
+        String dominio = email.substring(email.indexOf("@") + 1);
+
+        // Verificar se o domínio está na lista de domínios válidos
+        for (String dominioValido : dominiosValidos) {
+            if (dominioValido.equals(dominio)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void CadastrarUsuario(View v) {
         String email = edit_email.getText().toString();
         String senha = edit_senha.getText().toString();
 
+        // Verificar se o email é válido
+        if (!isEmailValido(email)) {
+            Snackbar snackbar = Snackbar.make(v, "Email inválido", Snackbar.LENGTH_SHORT);
+            snackbar.setBackgroundTint(Color.WHITE);
+            snackbar.setTextColor(Color.BLACK);
+            snackbar.show();
+            return;
+        }
+
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, senha).addOnCompleteListener(task -> {
-
             if (task.isSuccessful()) {
-
                 SalvarDadosUsuario();
                 Snackbar snackbar = Snackbar.make(v, mensagens[1], Snackbar.LENGTH_LONG);
                 snackbar.setBackgroundTint(Color.WHITE);
                 snackbar.setTextColor(Color.BLACK);
                 snackbar.show();
-
             } else {
                 String erro;
                 try {
                     throw Objects.requireNonNull(task.getException());
-
                 } catch (FirebaseAuthWeakPasswordException e) {
-                    erro = "Digite uma senha com no minimo 6 numeros";
+                    erro = "Digite uma senha com no mínimo 6 números";
                 } catch (FirebaseAuthUserCollisionException e) {
-                    erro = "Esta conta ja foi cadastrada";
+                    erro = "Esta conta já foi cadastrada";
                 } catch (FirebaseAuthInvalidCredentialsException e) {
                     erro = "Email inválido";
                 } catch (Exception e) {
                     erro = "Erro ao cadastrar usuário";
                 }
-
                 Snackbar snackbar = Snackbar.make(v, erro, Snackbar.LENGTH_SHORT);
                 snackbar.setBackgroundTint(Color.WHITE);
                 snackbar.setTextColor(Color.BLACK);
                 snackbar.show();
-
             }
-
         });
     }
     private void SalvarDadosUsuario(){
