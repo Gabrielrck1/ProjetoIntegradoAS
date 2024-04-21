@@ -72,7 +72,7 @@ public class FormCadastro extends AppCompatActivity {
 
     private boolean isEmailValido(String email) {
         // Lista de domínios válidos
-        String[] dominiosValidos = {"gmail.com", "hotmail.com", "yahoo.com", "bol.com"};
+        String[] dominiosValidos = {"gmail.com", "hotmail.com", "yahoo.com", "bol.com", "Outlook.com"};
 
         // Obter o domínio do email
         String dominio = email.substring(email.indexOf("@") + 1);
