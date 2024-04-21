@@ -88,7 +88,8 @@
         />
 
     <Button
-        android:id="@+id/button22"
+        android:id="@+id/seta"
+        android:drawableLeft="@drawable/icon_seta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/voltar"
@@ -96,7 +97,7 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp"
-        style="@style/Button22"
+        style="@style/Button12"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

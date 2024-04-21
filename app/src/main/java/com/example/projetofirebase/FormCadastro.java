@@ -42,7 +42,7 @@ public class FormCadastro extends AppCompatActivity {
 
         IniciarComponentes();
 
-        Button bt_voltar = findViewById(R.id.button22);
+        Button bt_voltar = findViewById(R.id.seta);
         bt_voltar.setOnClickListener(v -> finish());
 
         bt_cadastrar.setOnClickListener(v -> {

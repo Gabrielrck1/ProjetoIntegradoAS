@@ -18,4 +18,6 @@
     <string name="logo_pequeno">logo pequeno</string>
     <string name="logo_menor_email">logo menor email</string>
     <string name="deslogar">Deslogar</string>
+    <string name="Recuperar">Recuperação de senha</string>
+    <string name="recuperar_senha">Reenviar senha</string>
 </resources>

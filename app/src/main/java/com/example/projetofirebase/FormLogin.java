@@ -20,7 +20,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class FormLogin extends AppCompatActivity {
-    private TextView text_tela_cadastro;
+    private TextView text_tela_cadastro, text_tela_senha;
     private EditText edit_email,edit_senha;
     private Button bt_entrar;
     private ProgressBar progressBar;
@@ -41,6 +41,16 @@ public class FormLogin extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        text_tela_senha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(FormLogin.this, FormSenha.class);
+                startActivity(intent);
+            }
+        });
+
 
                 bt_entrar.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -95,5 +105,6 @@ public class FormLogin extends AppCompatActivity {
             edit_senha = findViewById(R.id.edit_senha);
             bt_entrar = findViewById(R.id.bt_entrar);
             progressBar = findViewById(R.id.progressbar);
+            text_tela_senha = findViewById(R.id.text_tela_senha);
     }
 }
