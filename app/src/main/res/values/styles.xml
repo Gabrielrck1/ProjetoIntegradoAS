@@ -56,7 +56,22 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
         <item name="textAllCaps">false</item>
-        <item name="android:background">@drawable/button2</item>
+        <item name="backgroundTint">@color/white</item>
+
+    </style>
+
+    <style name="Button22">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="backgroundTint">@color/white</item>
 
     </style>
 

@@ -13,4 +13,5 @@
     <string name="senha_1">Senha</string>
     <string name="repita_a_senha">Repita a senha</string>
     <string name="cadastrar">Cadastrar</string>
+    <string name="voltar">Voltar</string>
 </resources>

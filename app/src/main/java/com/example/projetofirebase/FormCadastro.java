@@ -42,6 +42,9 @@ public class FormCadastro extends AppCompatActivity {
 
         IniciarComponentes();
 
+        Button bt_voltar = findViewById(R.id.button22);
+        bt_voltar.setOnClickListener(v -> finish());
+
         bt_cadastrar.setOnClickListener(v -> {
 
             String nome = edit_nome.getText().toString();
@@ -76,10 +79,11 @@ public class FormCadastro extends AppCompatActivity {
             if (task.isSuccessful()) {
 
                 SalvarDadosUsuario();
-                Snackbar snackbar = Snackbar.make(v, mensagens[1], Snackbar.LENGTH_SHORT);
+                Snackbar snackbar = Snackbar.make(v, mensagens[1], Snackbar.LENGTH_LONG);
                 snackbar.setBackgroundTint(Color.WHITE);
                 snackbar.setTextColor(Color.BLACK);
                 snackbar.show();
+
             } else {
                 String erro;
                 try {
