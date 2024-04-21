@@ -2,13 +2,19 @@ package com.example.projetofirebase;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText; // Importe a classe EditText
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class FormSenha extends AppCompatActivity {
+
+    EditText edit_email; // Altere String para EditText
 
     private static final String TAG = "FormSenha"; // Defina sua tag de log
 
@@ -17,28 +23,30 @@ public class FormSenha extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recuperar_senha);
 
-        // Enviar email de redefinição de senha
-        enviarEmailRedefinicaoSenha();
+        // Configurar o botão 'btn_voltar' para voltar uma tela
+        Button btnVoltar = findViewById(R.id.seta2);
+        btnVoltar.setOnClickListener(v -> finish());
+
+        // Configurar o botão 'btn_reset' para enviar o email de redefinição de senha
+        Button btnReset = findViewById(R.id.btn_reset);
+        btnReset.setOnClickListener(v -> enviarEmailRedefinicaoSenha());
     }
 
     private void enviarEmailRedefinicaoSenha() {
         FirebaseAuth auth = FirebaseAuth.getInstance();
-        String email = "exemplo@email.com";
+        String email = edit_email.getText().toString().trim();
+
+        // Verificar se o campo de email está vazio
+        if (email.isEmpty()) {
+            Toast.makeText(FormSenha.this, "Por favor, insira seu email", Toast.LENGTH_LONG).show();
+            return; // Encerrar o método se o campo de email estiver vazio
+        }
 
         auth.sendPasswordResetEmail(email)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            // Email de redefinição de senha enviado com sucesso
-                            Log.d(TAG, "Email enviado.");
-                            // Exibir mensagem de sucesso para o usuário
-                        } else {
-                            // Falha ao enviar o email de redefinição de senha
-                            Log.w(TAG, "Falha ao enviar email.", task.getException());
-                            // Exibir mensagem de erro para o usuário
-                        }
-                    }
+                .addOnSuccessListener(aVoid -> Toast.makeText(FormSenha.this, "Enviamos um email de recuperação!", Toast.LENGTH_LONG).show())
+                .addOnFailureListener(e -> {
+                    // Tratar a falha ao enviar o email de redefinição de senha
+                    Toast.makeText(FormSenha.this, "Falha ao enviar email de recuperação: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                    Log.e(TAG, "Falha ao enviar email de recuperação", e);
                 });
-    }
-}
+    }}
