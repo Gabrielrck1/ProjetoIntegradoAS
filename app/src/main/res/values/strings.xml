@@ -14,4 +14,8 @@
     <string name="repita_a_senha">Repita a senha</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="voltar">Voltar</string>
+    <string name="logo_pessoa">logo pessoa</string>
+    <string name="logo_pequeno">logo pequeno</string>
+    <string name="logo_menor_email">logo menor email</string>
+    <string name="deslogar">Deslogar</string>
 </resources>

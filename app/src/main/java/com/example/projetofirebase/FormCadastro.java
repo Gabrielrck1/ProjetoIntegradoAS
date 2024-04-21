@@ -128,5 +128,5 @@ public class FormCadastro extends AppCompatActivity {
         edit_senha = findViewById(R.id.edit_senha);
         bt_cadastrar = findViewById(R.id.bt_cadastrar);
         edit_senha2 = findViewById(R.id.edit_senha2);
-    }
+    };
 }
