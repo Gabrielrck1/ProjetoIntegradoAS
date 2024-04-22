@@ -21,10 +21,10 @@ Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests o
 Este projeto está licenciado sob a Licença MIT.
 
 
-TELA DE LOGIN ✅
-TELA DE CADASTRO ✅
-TELA DE REDEFINIÇÃO DE SENHA ✅
-TELA DE USUÁRIO ✅
+TELA DE LOGIN ✅\n
+TELA DE CADASTRO ✅\n
+TELA DE REDEFINIÇÃO DE SENHA ✅\n
+TELA DE USUÁRIO ✅\n
 BOTÔES DE ACESSO ⌛
 TELA DE QUARTOS ⌛
 TELA DE RESERVAS ⌛
