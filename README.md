@@ -25,7 +25,7 @@ Este projeto está licenciado sob a Licença MIT.
 - TELA DE CADASTRO ✅
 - TELA DE REDEFINIÇÃO DE SENHA ✅
 - TELA DE USUÁRIO ✅
-- BOTÔES DE ACESSO ⌛
+- BOTÕES DE ACESSO ⌛
 - TELA DE QUARTOS ⌛
 - TELA DE RESERVAS ⌛
 - TELA DE CONTATO ⌛
