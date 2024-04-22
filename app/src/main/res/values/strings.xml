@@ -20,4 +20,7 @@
     <string name="deslogar">Deslogar</string>
     <string name="Recuperar">Recuperação de senha</string>
     <string name="recuperar_senha">Reenviar senha</string>
+    <string name="quartos">Quartos</string>
+    <string name="reservas">Reservas</string>
+    <string name="contato">Contato</string>
 </resources>
