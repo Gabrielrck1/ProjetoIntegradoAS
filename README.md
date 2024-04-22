@@ -19,3 +19,13 @@ Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests o
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT.
+
+
+TELA DE LOGIN ✅
+TELA DE CADASTRO ✅
+TELA DE REDEFINIÇÃO DE SENHA ✅
+TELA DE USUÁRIO ✅
+BOTÔES DE ACESSO ⌛
+TELA DE QUARTOS ⌛
+TELA DE RESERVAS ⌛
+TELA DE CONTATO ⌛
