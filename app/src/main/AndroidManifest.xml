@@ -16,6 +16,15 @@
             android:name=".TelaPrincipal"
             android:exported="false" />
         <activity
+            android:name=".Contato"
+            android:exported="false" />
+        <activity
+            android:name=".Quartos"
+            android:exported="false" />
+        <activity
+            android:name=".Reservas"
+            android:exported="false" />
+        <activity
             android:name=".FormCadastro"
             android:exported="false" />
         <activity

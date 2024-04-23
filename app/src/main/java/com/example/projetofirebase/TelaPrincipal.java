@@ -11,8 +11,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class TelaPrincipal extends AppCompatActivity {
 
-    private TextView nomeUsuario,emailUsuario;
-    private Button bt_deslogar;
+    private TextView nomeUsuario, emailUsuario;
+    private Button bt_deslogar, btContato, btQuartos, btReservas;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     String usuarioID;
 
@@ -24,11 +24,25 @@ public class TelaPrincipal extends AppCompatActivity {
         IniciarComponentes();
 
         bt_deslogar.setOnClickListener(v -> {
-
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(TelaPrincipal.this, FormLogin.class);
             startActivity(intent);
             finish();
+        });
+
+        btContato.setOnClickListener(v -> {
+            Intent intent = new Intent(TelaPrincipal.this, Contato.class);
+            startActivity(intent);
+        });
+
+        btQuartos.setOnClickListener(v -> {
+            Intent intent = new Intent(TelaPrincipal.this, Quartos.class);
+            startActivity(intent);
+        });
+
+        btReservas.setOnClickListener(v -> {
+            Intent intent = new Intent(TelaPrincipal.this, Reservas.class);
+            startActivity(intent);
         });
     }
 
@@ -40,16 +54,19 @@ public class TelaPrincipal extends AppCompatActivity {
         usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
         DocumentReference documentReference = db.collection("Usuarios").document(usuarioID);
         documentReference.addSnapshotListener((documentSnapshot, error) -> {
-            if (documentSnapshot != null){
+            if (documentSnapshot != null) {
                 nomeUsuario.setText(documentSnapshot.getString("nome"));
                 emailUsuario.setText(email);
             }
         });
     }
 
-    private void IniciarComponentes(){
-            nomeUsuario = findViewById(R.id.textNomeUsuario);
-            emailUsuario = findViewById(R.id.textEmailUsuario);
-            bt_deslogar = findViewById(R.id.bt_deslogar);
-        }
+    private void IniciarComponentes() {
+        nomeUsuario = findViewById(R.id.textNomeUsuario);
+        emailUsuario = findViewById(R.id.textEmailUsuario);
+        bt_deslogar = findViewById(R.id.bt_deslogar);
+        btContato = findViewById(R.id.bt_contato);
+        btQuartos = findViewById(R.id.bt_quartos);
+        btReservas = findViewById(R.id.bt_reservas);
+    }
 }

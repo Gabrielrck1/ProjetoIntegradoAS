@@ -91,47 +91,46 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button5"
+        app:layout_constraintTop_toBottomOf="@id/bt_quartos"
         />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/bt_quartos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/quartos"
         style="@style/Button123"
         app:layout_constraintLeft_toLeftOf="@id/iconeUser"
         app:layout_constraintTop_toBottomOf="@id/iconeEmail"
-        app:layout_constraintBottom_toBottomOf="@id/button6"
-        app:layout_constraintRight_toLeftOf="@id/button6"
+        app:layout_constraintBottom_toBottomOf="@id/bt_reservas"
+        app:layout_constraintRight_toLeftOf="@id/bt_reservas"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="15dp"
-
         />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/bt_reservas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="292dp"
         android:text="@string/reservas"
-        app:layout_constraintBottom_toBottomOf="@id/button5"
+        app:layout_constraintBottom_toBottomOf="@id/bt_quartos"
         android:layout_marginStart="15dp"
         style="@style/Button123"
-        app:layout_constraintStart_toEndOf="@+id/button5" />
+        app:layout_constraintStart_toEndOf="@+id/bt_quartos" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/bt_contato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
         android:text="@string/contato"
-        app:layout_constraintBottom_toBottomOf="@id/button6"
+        app:layout_constraintBottom_toBottomOf="@id/bt_reservas"
         android:layout_marginStart="15dp"
         style="@style/Button123"
-        app:layout_constraintStart_toEndOf="@id/button6"
-        app:layout_constraintLeft_toRightOf="@id/button6"
+        app:layout_constraintStart_toEndOf="@id/bt_reservas"
+        app:layout_constraintLeft_toRightOf="@id/bt_reservas"
         />
 
     <androidx.constraintlayout.widget.Guideline

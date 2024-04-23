@@ -25,7 +25,7 @@ public class FormSenha extends AppCompatActivity {
         edit_email2 = findViewById(R.id.edit_email2);
 
         // Configurar o botão 'btn_voltar' para voltar uma tela
-        Button btnVoltar = findViewById(R.id.seta2);
+        Button btnVoltar = findViewById(R.id.seta);
         btnVoltar.setOnClickListener(v -> finish());
 
         // Configurar o botão 'btn_reset' para enviar o email de redefinição de senha

@@ -23,4 +23,18 @@
     <string name="quartos">Quartos</string>
     <string name="reservas">Reservas</string>
     <string name="contato">Contato</string>
+    <string name="Reservar">Reservar</string>
+    <string name="texto_quarto_2">Sala de jantar privativa, uma cozinha totalmente equipada e uma banheira de hidromassagem</string>
+    <string name="texto_quarto_2_1">Maior e mais luxuosa acomodação disponível. Oferece espaço generoso para relaxamento e entretenimento</string>
+    <string name="texto_quarto_3_1">Um santuário de serenidade espera por você neste quarto de hotel, onde conforto e elegância se encontram </string>
+    <string name="texto_quarto_3">Uma cama adornada ocupa o centro, os tons suaves e a iluminação suave criam uma atmosfera acolhedora</string>>
+    <string name="texto_quarto_4">Suíte executiva, projetada para atender às necessidades dos viajantes a negócios</string>
+    <string name="texto_quarto_4_1">Funcionalidade e conforto, oferecendo uma área de trabalho bem equipada com uma ampla mesa e cadeira ergométrica</string>
+    <string name="su_te_master">Suíte Master</string>
+    <string name="su_te_simples">Suíte Simples</string>
+    <string name="suite">Suíte business</string>
+    <string name="suite_master">Suíte Master</string>
+    <string name="foto_quarto">FOTO QUARTO</string>
+    <string name="foto_quarto_2">FOTO QUARTO 2</string>
+    <string name="foto_quarto_3">FOTO QUARTO 3</string>
 </resources>

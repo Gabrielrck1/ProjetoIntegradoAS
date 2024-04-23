@@ -95,8 +95,9 @@
         android:drawableLeft="@drawable/icon_seta"
         android:text="@string/voltar"
         android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@id/title_cadastrese"
+        app:layout_constraintLeft_toLeftOf="@id/containerComponents"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
