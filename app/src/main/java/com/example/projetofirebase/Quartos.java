@@ -26,34 +26,28 @@ public class Quartos extends AppCompatActivity {
         ImageButton imageButton3 = findViewById(R.id.imageButton3);
 
         // Defina os métodos de clique para cada ImageButton
-        imageButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Faça algo quando o primeiro ImageButton for clicado
-                Intent intent = new Intent(Quartos.this, Quarto1.class);
-                startActivity(intent);
-            }
+        imageButton1.setOnClickListener(v -> {
+            // Faça algo quando o primeiro ImageButton for clicado
+            Intent intent = new Intent(Quartos.this, Quarto1.class);
+            startActivity(intent);
         });
 
-        imageButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Faça algo quando o segundo ImageButton for clicado
-                Intent intent = new Intent(Quartos.this, Quarto2.class);
-                startActivity(intent);
-            }
+        imageButton2.setOnClickListener(v -> {
+            // Faça algo quando o segundo ImageButton for clicado
+            Intent intent = new Intent(Quartos.this, Quarto2.class);
+            startActivity(intent);
         });
 
-        imageButton3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Faça algo quando o terceiro ImageButton for clicado
-                Intent intent = new Intent(Quartos.this, Quarto3.class);
-                startActivity(intent);
-            }
+        imageButton3.setOnClickListener(v -> {
+            // Faça algo quando o terceiro ImageButton for clicado
+            Intent intent = new Intent(Quartos.this, Quarto3.class);
+            startActivity(intent);
         });
     }
 
     private void IniciarComponentes() {
+    }
+
+    public void onClickImageButton(View view) {
     }
 }

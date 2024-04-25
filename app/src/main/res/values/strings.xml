@@ -45,4 +45,7 @@
     <string name="reserva_telefone">RESERVAS: (11) 1234-5678</string>
     <string name="whats">WHATSAPP: (11) 1234-5678</string>
     <string name="selecione_uma_data">Selecione uma data</string>
+    <string name="foto_do_quarto">foto do quarto</string>
+    <string name="foto_quarto_4">foto quarto 3</string>
+    <string name="deu_certo_man">Deu CERTO MANÉ</string>
 </resources>
