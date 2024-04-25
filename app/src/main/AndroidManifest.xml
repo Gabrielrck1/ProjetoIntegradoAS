@@ -16,6 +16,15 @@
             android:name=".TelaPrincipal"
             android:exported="false" />
         <activity
+            android:name=".Quarto1"
+            android:exported="false" />
+        <activity
+            android:name=".Quarto2"
+            android:exported="false" />
+        <activity
+            android:name=".Quarto3"
+            android:exported="false" />
+        <activity
             android:name=".Contato"
             android:exported="false" />
         <activity
@@ -30,6 +39,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <activity
+            android:name=".Reservar"
+            android:exported="false"/>
         <activity
             android:name=".FormSenha"
             android:exported="false" />

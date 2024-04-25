@@ -37,4 +37,12 @@
     <string name="foto_quarto">FOTO QUARTO</string>
     <string name="foto_quarto_2">FOTO QUARTO 2</string>
     <string name="foto_quarto_3">FOTO QUARTO 3</string>
+    <string name="your_string_here"><u>SUÍTE SIMPLES</u></string>
+    <string name="texto_quarto_5"><u>SUÍTE MASTER</u></string>
+    <string name="texto_quarto_6"><u>SUÍTE BUSINESS</u></string>
+    <string name="email_contato">HOTELO_OFICIAL@GMAIL.COM</string>
+    <string name="endereço">RUA DAS FIGUEIRAS, 1337\nCENTRO - 09030130 - \nSANTO ANDRÉ - SP - BRASIL</string>
+    <string name="reserva_telefone">RESERVAS: (11) 1234-5678</string>
+    <string name="whats">WHATSAPP: (11) 1234-5678</string>
+    <string name="selecione_uma_data">Selecione uma data</string>
 </resources>
