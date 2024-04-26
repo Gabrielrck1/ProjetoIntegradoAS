@@ -44,8 +44,12 @@
     <string name="endereço">RUA DAS FIGUEIRAS, 1337\nCENTRO - 09030130 - \nSANTO ANDRÉ - SP - BRASIL</string>
     <string name="reserva_telefone">RESERVAS: (11) 1234-5678</string>
     <string name="whats">WHATSAPP: (11) 1234-5678</string>
-    <string name="selecione_uma_data">Selecione uma data</string>
+    <string name="selecione_uma_data">Data entrada</string>
+    <string name="selecione_uma_data2">Data saída</string>
     <string name="foto_do_quarto">foto do quarto</string>
     <string name="foto_quarto_4">foto quarto 3</string>
     <string name="deu_certo_man">Deu CERTO MANÉ</string>
+    <string name="confirmar_reserva">Confirmar reserva</string>
+    <string name="confirmar_reserva2">Confirmar reserva</string>
+    <string name="confirmar_reserva3">Confirmar reserva</string>
 </resources>

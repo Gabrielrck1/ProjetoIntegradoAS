@@ -43,6 +43,12 @@
             android:name=".Reservar"
             android:exported="false"/>
         <activity
+            android:name=".Reservar2"
+            android:exported="false"/>
+        <activity
+            android:name=".Reservar3"
+            android:exported="false"/>
+        <activity
             android:name=".FormSenha"
             android:exported="false" />
         <activity

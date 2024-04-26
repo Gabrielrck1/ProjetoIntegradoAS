@@ -13,9 +13,9 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Reservar extends AppCompatActivity {
+public class Reservar3 extends AppCompatActivity {
     private EditText editTextDate;
-    private EditText editTextDate2;
+    private EditText editTextDate4;
     private Calendar calendar;
     private FirebaseFirestore db;
     String[] mensagens = {"Reserva feita com sucesso!"};
@@ -29,12 +29,12 @@ public class Reservar extends AppCompatActivity {
         bt_voltar.setOnClickListener(v -> finish());
 
         editTextDate = findViewById(R.id.editTextDate);
-        editTextDate2 = findViewById(R.id.editTextDate2);
+        editTextDate4 = findViewById(R.id.editTextDate2);
         calendar = Calendar.getInstance();
         db = FirebaseFirestore.getInstance();
 
         editTextDate.setOnClickListener(this::onClick);
-        editTextDate2.setOnClickListener(this::onClick);
+        editTextDate4.setOnClickListener(this::onClick);
 
         Button buttonConfirm = findViewById(R.id.buttonConfirm);
 
@@ -56,27 +56,27 @@ public class Reservar extends AppCompatActivity {
         int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
 
         // Initialize the DatePickerDialog with the selected date
-        DatePickerDialog datePickerDialog = new DatePickerDialog(Reservar.this,
+        DatePickerDialog datePickerDialog = new DatePickerDialog(Reservar3.this,
                 (view, year1, monthOfYear, dayOfMonth1) -> {
                     String selectedDate = dayOfMonth1 + "/" + (monthOfYear + 1) + "/" + year1;
 
                     // Set the selected date directly to the clicked EditText field
                     if (v == editTextDate) {
                         editTextDate.setText(selectedDate);
-                    } else if (v == editTextDate2) {
-                        editTextDate2.setText(selectedDate);
+                    } else if (v == editTextDate4) {
+                        editTextDate4.setText(selectedDate);
                     }
                 }, year, month, dayOfMonth);
 
         // Show the DatePickerDialog based on the EditText field that was clicked
-        if (v == editTextDate || v == editTextDate2) {
+        if (v == editTextDate || v == editTextDate4) {
             datePickerDialog.show();
         }
     }
 
     private void saveToFirestore(View v) {
         String date1 = editTextDate.getText().toString();
-        String date2 = editTextDate2.getText().toString();
+        String date2 = editTextDate4.getText().toString();
 
         // Create a new reservation object
         Map<String, Object> reservation = new HashMap<>();
@@ -98,7 +98,7 @@ public class Reservar extends AppCompatActivity {
                         public void onDismissed(Snackbar transientBottomBar, int event) {
                             super.onDismissed(transientBottomBar, event);
                             // Navigate to 'TelaPrincipal' after the Snackbar is dismissed
-                            startActivity(new Intent(Reservar.this, TelaPrincipal.class));
+                            startActivity(new Intent(Reservar3.this, TelaPrincipal.class));
                         }
                     });
                     snackbar.show();

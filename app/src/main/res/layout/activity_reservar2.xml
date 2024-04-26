@@ -4,28 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Reservar"
+    tools:context=".Reservar2"
     android:background="@color/black">
 
     <EditText
-        android:id="@+id/editTextDate2"
+        android:id="@+id/editTextDate3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:autofillHints="DATA E HORARIO"
         android:clickable="true"
         android:focusable="true"
         android:focusableInTouchMode="false"
         android:hint="@string/selecione_uma_data"
+        android:inputType="datetime"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
-        android:inputType="datetime"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/editTextDate"
-        app:layout_constraintVertical_bias="0.612"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
         />
+
     <EditText
         android:id="@+id/editTextDate"
         android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/quarto3yagograndao"
+        app:srcCompat="@mipmap/quarto5grande"
         android:contentDescription="@string/foto_quarto_2"
         />
 
@@ -77,7 +77,7 @@
         style="@style/Button12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/confirmar_reserva3"
+        android:text="@string/confirmar_reserva"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

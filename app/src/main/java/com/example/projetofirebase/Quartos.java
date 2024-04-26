@@ -34,13 +34,13 @@ public class Quartos extends AppCompatActivity {
 
         imageButton2.setOnClickListener(v -> {
             // Faça algo quando o segundo ImageButton for clicado
-            Intent intent = new Intent(Quartos.this, Quarto2.class);
+            Intent intent = new Intent(Quartos.this, Quarto3.class);
             startActivity(intent);
         });
 
         imageButton3.setOnClickListener(v -> {
             // Faça algo quando o terceiro ImageButton for clicado
-            Intent intent = new Intent(Quartos.this, Quarto3.class);
+            Intent intent = new Intent(Quartos.this, Quarto2.class);
             startActivity(intent);
         });
     }
