@@ -117,32 +117,29 @@ public class Reservas extends AppCompatActivity {
             db.collection("reservations")
                     .whereEqualTo("userID", userID)
                     .get()
-                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                            if (task.isSuccessful()) {
-                                for (QueryDocumentSnapshot document : task.getResult()) {
-                                    // Delete os campos date1 e date2 do documento
-                                    db.collection("reservations").document(document.getId())
-                                            .update(
-                                                    "date1", FieldValue.delete(),
-                                                    "quarto", FieldValue.delete(),
-                                                    "date2", FieldValue.delete()
-                                            )
-                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task) {
-                                                    if (task.isSuccessful()) {
-                                                        Log.d(TAG, "Reservation dates deleted successfully");
-                                                    } else {
-                                                        Log.d(TAG, "Error deleting reservation dates", task.getException());
-                                                    }
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                // Delete os campos date1 e date2 do documento
+                                db.collection("reservations").document(document.getId())
+                                        .update(
+                                                "date1", FieldValue.delete(),
+                                                "quarto", FieldValue.delete(),
+                                                "date2", FieldValue.delete()
+                                        )
+                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if (task.isSuccessful()) {
+                                                    Log.d(TAG, "Reservation dates deleted successfully");
+                                                } else {
+                                                    Log.d(TAG, "Error deleting reservation dates", task.getException());
                                                 }
-                                            });
-                                }
-                            } else {
-                                Log.d(TAG, "Error getting documents: ", task.getException());
+                                            }
+                                        });
                             }
+                        } else {
+                            Log.d(TAG, "Error getting documents: ", task.getException());
                         }
                     });
         } else {
