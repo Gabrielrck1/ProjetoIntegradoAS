@@ -127,14 +127,11 @@ public class Reservas extends AppCompatActivity {
                                                 "quarto", FieldValue.delete(),
                                                 "date2", FieldValue.delete()
                                         )
-                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<Void> task) {
-                                                if (task.isSuccessful()) {
-                                                    Log.d(TAG, "Reservation dates deleted successfully");
-                                                } else {
-                                                    Log.d(TAG, "Error deleting reservation dates", task.getException());
-                                                }
+                                        .addOnCompleteListener(task1 -> {
+                                            if (task1.isSuccessful()) {
+                                                Log.d(TAG, "Reservation dates deleted successfully");
+                                            } else {
+                                                Log.d(TAG, "Error deleting reservation dates", task1.getException());
                                             }
                                         });
                             }

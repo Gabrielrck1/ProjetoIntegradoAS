@@ -72,6 +72,7 @@
             />
 
         <ImageView
+            android:contentDescription="foto do quarto escolhido"
             android:id="@+id/quarto1"
             android:layout_width="315sp"
             android:layout_height="244sp"
