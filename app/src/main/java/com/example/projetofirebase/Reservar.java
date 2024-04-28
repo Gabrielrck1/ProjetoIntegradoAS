@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -15,7 +16,7 @@ import java.util.Map;
 
 public class Reservar extends AppCompatActivity {
     private EditText editTextDate;
-    private EditText editTextDate2;
+    private EditText editTextDate3;
     private Calendar calendar;
     private FirebaseFirestore db;
     String[] mensagens = {"Reserva feita com sucesso!"};
@@ -23,18 +24,18 @@ public class Reservar extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reservar);
+        setContentView(R.layout.activity_reservar2);
         IniciarComponentes();
         Button bt_voltar = findViewById(R.id.seta);
         bt_voltar.setOnClickListener(v -> finish());
 
         editTextDate = findViewById(R.id.editTextDate);
-        editTextDate2 = findViewById(R.id.editTextDate2);
+        editTextDate3 = findViewById(R.id.editTextDate3);
         calendar = Calendar.getInstance();
         db = FirebaseFirestore.getInstance();
 
         editTextDate.setOnClickListener(this::onClick);
-        editTextDate2.setOnClickListener(this::onClick);
+        editTextDate3.setOnClickListener(this::onClick);
 
         Button buttonConfirm = findViewById(R.id.buttonConfirm);
 
@@ -63,30 +64,36 @@ public class Reservar extends AppCompatActivity {
                     // Set the selected date directly to the clicked EditText field
                     if (v == editTextDate) {
                         editTextDate.setText(selectedDate);
-                    } else if (v == editTextDate2) {
-                        editTextDate2.setText(selectedDate);
+                    } else if (v == editTextDate3) {
+                        editTextDate3.setText(selectedDate);
                     }
                 }, year, month, dayOfMonth);
 
         // Show the DatePickerDialog based on the EditText field that was clicked
-        if (v == editTextDate || v == editTextDate2) {
+        if (v == editTextDate || v == editTextDate3) {
             datePickerDialog.show();
         }
     }
 
     private void saveToFirestore(View v) {
         String date1 = editTextDate.getText().toString();
-        String date2 = editTextDate2.getText().toString();
+        String date2 = editTextDate3.getText().toString();
+        String date3 = "Suíte Master".toString();
+
+        // Get the current user ID
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        String userID = mAuth.getCurrentUser().getUid();
 
         // Create a new reservation object
         Map<String, Object> reservation = new HashMap<>();
-        reservation.put("date1", date1);
-        reservation.put("date2", date2);
+        reservation.put("date1", date2);
+        reservation.put("date2", date1);
+        reservation.put("quarto", date3);
 
         // Add the reservation to the "reservations" collection in Firestore
-        db.collection("reservations")
-                .add(reservation)
-                .addOnSuccessListener(documentReference -> {
+        db.collection("reservations").document(userID) // Use userID as the document ID
+                .set(reservation) // Set the data using set() to overwrite any existing data
+                .addOnSuccessListener(aVoid -> {
                     // Data added successfully
                     // You can add any additional functionality here
 

@@ -52,6 +52,12 @@
             android:name=".FormSenha"
             android:exported="false" />
         <activity
+            android:name=".Reservas2"
+            android:exported="false" />
+        <activity
+            android:name=".Reservas3"
+            android:exported="false" />
+        <activity
             android:name=".FormLogin"
             android:exported="true">
             <intent-filter>

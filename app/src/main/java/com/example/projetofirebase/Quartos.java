@@ -21,20 +21,20 @@ public class Quartos extends AppCompatActivity {
         bt_voltar.setOnClickListener(v -> finish());
 
         // Encontre os ImageButtons
-        ImageButton imageButton1 = findViewById(R.id.imageButton);
+        ImageButton imageButton1 = findViewById(R.id.imageButton1);
         ImageButton imageButton2 = findViewById(R.id.imageButton2);
         ImageButton imageButton3 = findViewById(R.id.imageButton3);
 
         // Defina os métodos de clique para cada ImageButton
         imageButton1.setOnClickListener(v -> {
             // Faça algo quando o primeiro ImageButton for clicado
-            Intent intent = new Intent(Quartos.this, Quarto1.class);
+            Intent intent = new Intent(Quartos.this, Quarto3.class);
             startActivity(intent);
         });
 
         imageButton2.setOnClickListener(v -> {
             // Faça algo quando o segundo ImageButton for clicado
-            Intent intent = new Intent(Quartos.this, Quarto3.class);
+            Intent intent = new Intent(Quartos.this, Quarto1.class);
             startActivity(intent);
         });
 

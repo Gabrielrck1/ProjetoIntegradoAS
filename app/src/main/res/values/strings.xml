@@ -52,4 +52,8 @@
     <string name="confirmar_reserva">Confirmar reserva</string>
     <string name="confirmar_reserva2">Confirmar reserva</string>
     <string name="confirmar_reserva3">Confirmar reserva</string>
+    <string name="cancelar_reserva">Cancelar Reserva</string>
+    <string name="suas_reservas">SUAS RESERVAS</string>
+    <string name="suite_simples">Suíte Simples</string>
+    <string name="suite_business">Suíte Business</string>
 </resources>

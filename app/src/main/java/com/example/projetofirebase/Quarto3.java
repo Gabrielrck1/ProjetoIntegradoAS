@@ -21,7 +21,7 @@ public class Quarto3 extends AppCompatActivity {
 
 
         bt_reservar.setOnClickListener(v -> {
-            Intent intent = new Intent(Quarto3.this, Reservar3.class);
+            Intent intent = new Intent(Quarto3.this, Reservar2.class);
             startActivity(intent);
         });
 
