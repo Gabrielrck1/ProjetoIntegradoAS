@@ -1,7 +1,8 @@
 package com.example.projetofirebase;
+
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -47,6 +48,7 @@ public class Reservar2 extends AppCompatActivity {
     }
 
     private void confirmReservation() {
+        // Implement confirmation logic here
     }
 
     private void IniciarComponentes() {
@@ -79,6 +81,7 @@ public class Reservar2 extends AppCompatActivity {
     private void saveToFirestore(View v) {
         String date1 = editTextDate.getText().toString();
         String date2 = editTextDate4.getText().toString();
+        String date3 = "Suíte Simples";
 
         // Get the current user ID
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -86,14 +89,15 @@ public class Reservar2 extends AppCompatActivity {
 
         // Create a new reservation object
         Map<String, Object> reservation = new HashMap<>();
-        reservation.put("userID", userID); // Add the userID to the reservation
         reservation.put("date1", date2);
         reservation.put("date2", date1);
+        reservation.put("quarto", date3);
+        reservation.put("userID", userID);
 
         // Add the reservation to the "reservations" collection in Firestore
-        db.collection("reservations")
-                .add(reservation)
-                .addOnSuccessListener(documentReference -> {
+        db.collection("reservations").document(userID) // Use userID as the document ID
+                .set(reservation) // Set the data using set() to overwrite any existing data
+                .addOnSuccessListener(aVoid -> {
                     // Data added successfully
                     // You can add any additional functionality here
 
@@ -106,6 +110,7 @@ public class Reservar2 extends AppCompatActivity {
                             super.onDismissed(transientBottomBar, event);
                             // Navigate to 'TelaPrincipal' after the Snackbar is dismissed
                             startActivity(new Intent(Reservar2.this, TelaPrincipal.class));
+                            finish(); // Finish current activity after navigating
                         }
                     });
                     snackbar.show();

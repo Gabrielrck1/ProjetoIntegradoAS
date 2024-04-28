@@ -1,7 +1,8 @@
 package com.example.projetofirebase;
+
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,7 @@ public class Reservar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reservar2);
         IniciarComponentes();
+
         Button bt_voltar = findViewById(R.id.seta);
         bt_voltar.setOnClickListener(v -> finish());
 
@@ -46,9 +48,11 @@ public class Reservar extends AppCompatActivity {
     }
 
     private void confirmReservation() {
+        // Implement confirmation logic here
     }
 
     private void IniciarComponentes() {
+        // Initialize any other components here
     }
 
     private void onClick(View v) {
@@ -78,7 +82,7 @@ public class Reservar extends AppCompatActivity {
     private void saveToFirestore(View v) {
         String date1 = editTextDate.getText().toString();
         String date2 = editTextDate3.getText().toString();
-        String date3 = "Suíte Master".toString();
+        String date3 = "Suíte Business";
 
         // Get the current user ID
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -89,6 +93,7 @@ public class Reservar extends AppCompatActivity {
         reservation.put("date1", date2);
         reservation.put("date2", date1);
         reservation.put("quarto", date3);
+        reservation.put("userID", userID);
 
         // Add the reservation to the "reservations" collection in Firestore
         db.collection("reservations").document(userID) // Use userID as the document ID
@@ -106,6 +111,7 @@ public class Reservar extends AppCompatActivity {
                             super.onDismissed(transientBottomBar, event);
                             // Navigate to 'TelaPrincipal' after the Snackbar is dismissed
                             startActivity(new Intent(Reservar.this, TelaPrincipal.class));
+                            finish(); // Finish current activity after navigating
                         }
                     });
                     snackbar.show();
