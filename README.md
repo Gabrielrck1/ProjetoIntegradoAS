@@ -1,24 +1,10 @@
 # Projeto Aplicativo Android & Banco de Dados
 
-Este é um projeto de teste final para autoavaliar o conhecimento adquirido.
+Este é um projeto de teste final para autoavaliar o conhecimento adquirido no curso.
 
 ## Descrição
 
-O projeto consiste em criar um aplicativo Android com Banco de Dados.
-
-## Instalação
-
-- Clone este repositório.
-- Execute o comando **npm install** para instalar as dependências.
-- Execute o comando **npm start** para iniciar o servidor.
-
-## Contribuição
-
-Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests ou abrir issues para relatar problemas ou sugerir melhorias.
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT.
+O projeto consiste em criar um aplicativo Android com Banco de Dados Firestore.
 
 - TELA DE LOGIN ✅
 - TELA DE CADASTRO ✅
@@ -31,5 +17,14 @@ Este projeto está licenciado sob a Licença MIT.
 - TELA DO QUARTO 2 ✅
 - TELA DO QUARTO 3 ✅
 - TELA DE CONTATO ✅
-- TELA DE RESERVAS ⌛
-- TELA DE SELEÇÃO DATA/RESERVA ⌛
+- TELA DE RESERVAS ✅
+- TELA DE SELEÇÃO DATA/RESERVA ✅
+
+- PRONTO PARA USO, APENAS DEMONSTRATIVO.
+
+- ## Feito por
+
+- Gabriel vasconcelos morassutti, líder do projeto
+- Yago Giusti, líder de IU e UX
+- Luiz Eduardo de Lucca Rodrigues, Suporte
+- Leonardo Filipe, vulgo CRiMOw
